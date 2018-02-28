@@ -14,7 +14,7 @@ namespace EFCore_DepenentEntities_Demo2.Data
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-			optionsBuilder.UseSqlServer(@"[YOUR-CONNECTION-STRING]");
+			optionsBuilder.UseSqlServer(@"Data Source=localhost;Initial Catalog=EfCoreTest;Integrated Security=True;Pooling=False");
 		}
     }
 

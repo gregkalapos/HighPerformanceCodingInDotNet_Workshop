@@ -22,7 +22,7 @@ namespace EFQueries_Demo1.Data
         
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-			optionsBuilder.UseSqlServer(@"Data Source=TAG009441103510;Initial Catalog=EfCoreTest;Integrated Security=True;Pooling=False");
+			optionsBuilder.UseSqlServer(@"Data Source=localhost;Initial Catalog=EfCoreTest;Integrated Security=True;Pooling=False");
         }
     }
 

@@ -34,23 +34,23 @@ namespace EFQueries_Demo1.Controllers
 		#region VERSION1
 		//Problem: this fethes the whole table
 		//Solution: don't do filtering in the .NET Core app, do it in the database
-		//public IActionResult UsersBornBefore1980()
-		//{
-		//	List<String> users = new List<string>();
+		public IActionResult UsersBornBefore1980()
+		{
+			List<String> users = new List<string>();
 
-		//	var d1980 = new DateTime(1980, 1, 1);
-		//	var dbUsers = SampleDataContext.Users;
+			var d1980 = new DateTime(1980, 1, 1);
+			var dbUsers = SampleDataContext.Users;
 
-		//	foreach (var item in dbUsers)
-		//	{
-		//		if (item.BirthDate < d1980)
-		//		{
-		//			users.Add(item.UserName);
-		//		}
-		//	}
+			foreach (var item in dbUsers)
+			{
+				if (item.BirthDate < d1980)
+				{
+					users.Add(item.UserName);
+				}
+			}
 
-		//	return View(users);
-		//}
+			return View(users);
+		}
 		#endregion
 
 		#region VERSION2
